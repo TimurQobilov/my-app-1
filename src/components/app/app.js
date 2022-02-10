@@ -7,6 +7,14 @@ import EmployersAddFrom from '../employers-add-from/employers-add-from';
 import './app.css';
 
 function App() {
+
+    const data = [
+        {name: 'Timur Qobilov', salary: 800, increase: false},
+        {name: 'Timur Qobilov', salary: 900, increase: true},
+        {name: 'Timur Qobilov', salary: 1000, increase: false},
+        
+    ];
+
     return (
         <div className="app">
             <AppInfo/>
@@ -16,7 +24,7 @@ function App() {
                 <AppFilter/>
             </div>
 
-            <EmployersList/>
+            <EmployersList data={data}/>
             <EmployersAddFrom/>
         </div>
     );
